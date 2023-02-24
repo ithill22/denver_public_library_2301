@@ -12,7 +12,7 @@ RSpec.describe Author do
   end
 
   describe '#write' do
-    it can 'create a book in authors name' do
+    it 'can create a book in authors name and store it in books array' do
       charlotte_bronte = Author.new({first_name: "Charlotte", last_name: "Bronte"})
       jane_eyre = charlotte_bronte.write("Jane Eyre", "October 16, 1847")
 
