@@ -24,7 +24,7 @@ RSpec.describe Library do
     end
   end
 
-  describe '#publication_time_fram_for' do
+  describe '#publication_time_frame_for' do
     it 'can create hash with authors year of earliest book and year of latest work in library' do
       jane_eyre = charlotte_bronte.write("Jane Eyre", "October 16, 1847")
       villette = charlotte_bronte.write("Villette", "1853")
