@@ -16,7 +16,6 @@ class Book
   end
 
   def publication_year
-    date = publication_date.split(' ')
-    date[2]
+    date = publication_date.split.last
   end
 end
