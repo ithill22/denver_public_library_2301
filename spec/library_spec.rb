@@ -23,4 +23,14 @@ RSpec.describe Library do
       expect(library.books).to eq([jane_eyre, villette])
     end
   end
+
+  describe '#publication_time_fram_for' do
+    it 'can create hash with authors year of earliest book and year of latest work in library' do
+      jane_eyre = charlotte_bronte.write("Jane Eyre", "October 16, 1847")
+      villette = charlotte_bronte.write("Villette", "1853")
+      library.add_author(charlotte_bronte)
+
+      expect(library.publication_time_frame_for(charlotte_bronte)).to eq({:start => '1847', :end => '1853'})
+    end
+  end
 end
